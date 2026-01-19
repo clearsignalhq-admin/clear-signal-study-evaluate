@@ -4,13 +4,15 @@ import reactQuestions from '../data/questions/react_exam_100_questions.json'
 import javaQuestions from '../data/questions/java_exam_v1_200_questions.json'
 import tsQuestions from '../data/questions/typescript_exam_v1.json'
 import jsQuestions from '../data/questions/javascript_exam_100_questions.json'
+import springQuestions from '../data/questions/spring_hibernate_exam_100_questions.json'
 
 // Map of subject codes to their data
 const subjectData: Record<string, Subject> = {
     'react': reactQuestions,
     'java': javaQuestions,
     'typescript': tsQuestions,
-    'javascript': jsQuestions
+    'javascript': jsQuestions,
+    'spring-hibernate': springQuestions
 }
 
 export type QuestionStrategy = 'random' | 'not_answered' | 'least_answered';

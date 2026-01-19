@@ -11,6 +11,7 @@ import reactQuestions from '../data/questions/react_exam_100_questions.json'
 import javaQuestions from '../data/questions/java_exam_v1_200_questions.json'
 import tsQuestions from '../data/questions/typescript_exam_v1.json'
 import jsQuestions from '../data/questions/javascript_exam_100_questions.json'
+import springQuestions from '../data/questions/spring_hibernate_exam_100_questions.json'
 
 interface SubjectOption {
     name: string;
@@ -30,6 +31,7 @@ export default function Dashboard() {
         { name: 'Java', code: 'java', totalQuestions: javaQuestions.totalQuestions },
         { name: 'TypeScript', code: 'typescript', totalQuestions: tsQuestions.totalQuestions },
         { name: 'JavaScript', code: 'javascript', totalQuestions: jsQuestions.totalQuestions },
+        { name: 'Spring & Hibernate', code: 'spring-hibernate', totalQuestions: springQuestions.totalQuestions },
     ]
 
     const strategyOptions = [

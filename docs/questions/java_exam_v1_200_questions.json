@@ -31,7 +31,27 @@
         { "id": 22, "question": "What is access modifier?", "answer": "Controls visibility of classes and members." },
         { "id": 23, "question": "Types of access modifiers?", "answer": "public, protected, default, private." },
         { "id": 24, "question": "What is package?", "answer": "A namespace that organizes classes." },
-        { "id": 25, "question": "What is import statement?", "answer": "Allows access to classes from other packages." }
+        { "id": 25, "question": "What is import statement?", "answer": "Allows access to classes from other packages." },
+        { "id": 101, "question": "What are primitive data types?", "answer": "Basic types: byte, short, int, long, float, double, char, boolean." },
+        { "id": 102, "question": "What is non-primitive data type?", "answer": "Reference types like Classes, Interfaces, Arrays." },
+        { "id": 103, "question": "What is type casting?", "answer": "Converting one data type into another." },
+        { "id": 104, "question": "What is widening casting?", "answer": "Automatic casting from smaller to larger type (e.g., int to double)." },
+        { "id": 105, "question": "What is narrowing casting?", "answer": "Manual casting from larger to smaller type (e.g., double to int)." },
+        { "id": 106, "question": "What is a variable?", "answer": "A container for storing data values." },
+        { "id": 107, "question": "Difference between local and instance variables?", "answer": "Local are inside methods; instance are inside class but outside methods." },
+        { "id": 108, "question": "What is a literal?", "answer": "A constant value assigned to a variable." },
+        { "id": 109, "question": "What are arithmetic operators?", "answer": "+, -, *, /, % used for mathematical operations." },
+        { "id": 110, "question": "What are relational operators?", "answer": "==, !=, >, <, >=, <= used for comparison." },
+        { "id": 111, "question": "What are logical operators?", "answer": "&&, ||, ! used for logic." },
+        { "id": 112, "question": "What is ternary operator?", "answer": "Shorthand for if-else: variable = (condition) ? expressionTrue : expressionFalse." },
+        { "id": 113, "question": "What is switch statement?", "answer": "Selects one of many code blocks to be executed." },
+        { "id": 114, "question": "What is a loop?", "answer": "Executes a block of code as long as a specified condition is reached." },
+        { "id": 115, "question": "Difference between while and do-while?", "answer": "Do-while executes the block at least once before checking condition." },
+        { "id": 116, "question": "What is break statement?", "answer": "Used to jump out of a loop or switch." },
+        { "id": 117, "question": "What is continue statement?", "answer": "Breaks one iteration (in the loop) if a specified condition occurs, and continues with the next iteration." },
+        { "id": 118, "question": "What is an array?", "answer": "Container object that holds a fixed number of values of a single type." },
+        { "id": 119, "question": "How to declare an array?", "answer": "dataType[] arrayName;" },
+        { "id": 120, "question": "What is a multidimensional array?", "answer": "An array of arrays." }
       ]
     },
     {
@@ -62,7 +82,27 @@
         { "id": 47, "question": "Can we override static methods?", "answer": "No." },
         { "id": 48, "question": "Can we override private methods?", "answer": "No." },
         { "id": 49, "question": "What is covariant return type?", "answer": "Overridden method returns subclass type." },
-        { "id": 50, "question": "What is object class?", "answer": "Root class of all Java classes." }
+        { "id": 50, "question": "What is object class?", "answer": "Root class of all Java classes." },
+        { "id": 121, "question": "What is association?", "answer": "Relationship between two separate classes established through their objects." },
+        { "id": 122, "question": "What is aggregation?", "answer": "A specialized form of association where all objects have their own lifecycle but there is ownership (HAS-A)." },
+        { "id": 123, "question": "What is dependency injection?", "answer": "A technique whereby one object supplies the dependencies of another object." },
+        { "id": 124, "question": "What is tight coupling?", "answer": "When a group of classes are highly dependent on one another." },
+        { "id": 125, "question": "What is loose coupling?", "answer": "When classes are independent of one another." },
+        { "id": 126, "question": "What is cohesion?", "answer": "Refers to the degree to which the elements inside a module belong together." },
+        { "id": 127, "question": "What is dynamic binding?", "answer": "When the compiler is not able to resolve the call/binding at compile time." },
+        { "id": 128, "question": "What is static binding?", "answer": "When the method call is resolved at compile time." },
+        { "id": 129, "question": "Can we override the main method?", "answer": "No, because it is static." },
+        { "id": 130, "question": "What is an anonymous inner class?", "answer": "An inner class without a name and for which only a single object is created." },
+        { "id": 131, "question": "What is a local inner class?", "answer": "A class defined inside a block." },
+        { "id": 132, "question": "What is a member inner class?", "answer": "A non-static class created inside a class but outside a method." },
+        { "id": 133, "question": "What is a static nested class?", "answer": "A static class defined inside another class." },
+        { "id": 134, "question": "Can abstract class have constructors?", "answer": "Yes, to initialize data members." },
+        { "id": 135, "question": "Can interface have constructors?", "answer": "No." },
+        { "id": 136, "question": "Can we declare an interface as final?", "answer": "No, because it needs to be implemented." },
+        { "id": 137, "question": "What is marker interface?", "answer": "An interface with no methods (e.g., Serializable, Cloneable)." },
+        { "id": 138, "question": "What is functional interface in Java 8?", "answer": "An interface with exactly one abstract method." },
+        { "id": 139, "question": "What represents the IS-A relationship?", "answer": "Inheritance." },
+        { "id": 140, "question": "What is method hiding?", "answer": "When a subclass defines a static method with the same signature as a static method in the superclass." }
       ]
     },
     {
@@ -88,7 +128,27 @@
         { "id": 67, "question": "What is Queue?", "answer": "FIFO data structure." },
         { "id": 68, "question": "What is Deque?", "answer": "Double-ended queue." },
         { "id": 69, "question": "What is PriorityQueue?", "answer": "Queue based on priority." },
-        { "id": 70, "question": "Why Map does not extend Collection?", "answer": "Different structure." }
+        { "id": 70, "question": "Why Map does not extend Collection?", "answer": "Different structure." },
+        { "id": 141, "question": "What is the difference between Array and ArrayList?", "answer": "Array is fixed size, ArrayList is dynamic size." },
+        { "id": 142, "question": "What is Vector?", "answer": "A synchronized, thread-safe dynamic array." },
+        { "id": 143, "question": "Difference between ArrayList and Vector?", "answer": "ArrayList is not synchronized (fast), Vector is synchronized (slow)." },
+        { "id": 144, "question": "What is Stack class?", "answer": "Represents a LIFO (Last In First Out) stack of objects." },
+        { "id": 145, "question": "What is LinkedHashSet?", "answer": "Ordered version of HashSet (maintains insertion order)." },
+        { "id": 146, "question": "How does HashMap work internally?", "answer": "Uses hashing with array of buckets (Linked Lists or Trees in Java 8) to store Key-Value pairs." },
+        { "id": 147, "question": "What is hash collision?", "answer": "When two keys produce the same hash code." },
+        { "id": 148, "question": "What happens if two keys have same hashcode?", "answer": "They are stored in the same bucket using a linked list (or tree)." },
+        { "id": 149, "question": "What is load factor in HashMap?", "answer": "Measure of how full the hash table is allowed to get before its capacity is automatically increased (default 0.75)." },
+        { "id": 150, "question": "What is WeakHashMap?", "answer": "A Map implementation where keys are WeakReferences." },
+        { "id": 151, "question": "What is IdentityHashMap?", "answer": "Uses reference equality (==) instead of object equality (equals) for keys." },
+        { "id": 152, "question": "What is EnumSet?", "answer": "A specialized Set implementation for use with enum types." },
+        { "id": 153, "question": "What is BlockingQueue?", "answer": "A Queue that supports operations that wait if necessary for elements to become available." },
+        { "id": 154, "question": "What is CopyOnWriteArrayList?", "answer": "A thread-safe variant of ArrayList where all mutative operations are implemented by making a fresh copy." },
+        { "id": 155, "question": "What is NavigableMap?", "answer": "A SortedMap extended with navigation methods returning the closest matches for given search targets." },
+        { "id": 156, "question": "What is UnsupportedOperationException?", "answer": "Thrown to indicate that the requested operation is not supported (e.g. modifying an unmodifiable list)." },
+        { "id": 157, "question": "How to make a collection read-only?", "answer": "Collections.unmodifiableList(), unmodifiableSet(), etc." },
+        { "id": 158, "question": "How to synchronize a collection?", "answer": "Collections.synchronizedList(), synchronizedMap(), etc." },
+        { "id": 159, "question": "Difference between poll() and remove() in Queue?", "answer": "poll returns null if empty, remove throws exception." },
+        { "id": 160, "question": "Difference between peek() and element() in Queue?", "answer": "peek returns null if empty, element throws exception." }
       ]
     },
     {
@@ -104,7 +164,17 @@
         { "id": 77, "question": "What is throw?", "answer": "Explicitly throws an exception." },
         { "id": 78, "question": "What is throws?", "answer": "Declares exceptions." },
         { "id": 79, "question": "Can we have multiple catch blocks?", "answer": "Yes." },
-        { "id": 80, "question": "What is custom exception?", "answer": "User-defined exception." }
+        { "id": 80, "question": "What is custom exception?", "answer": "User-defined exception." },
+        { "id": 161, "question": "What is the difference between Error and Exception?", "answer": "Error is critical (system) issue usually not recoverable; Exception is application issue that can be handled." },
+        { "id": 162, "question": "What is try-with-resources?", "answer": "Automates resource management (closing files/sockets) declared in try statement (Java 7+)." },
+        { "id": 163, "question": "What is AutoCloseable interface?", "answer": "Interface required for objects to be used in try-with-resources." },
+        { "id": 164, "question": "Can we catch multiple exceptions in one catch block?", "answer": "Yes, using pipe operator | (Java 7+)." },
+        { "id": 165, "question": "What happens if we throw exception in finally block?", "answer": "It overrides any exception thrown in try/catch blocks." },
+        { "id": 166, "question": "What is chained exception?", "answer": "Relating one exception to another (cause) to maintain stack trace context." },
+        { "id": 167, "question": "Is it good practice to catch generic Exception?", "answer": "No, it hides specific errors." },
+        { "id": 168, "question": "Does finally execute if System.exit() is called?", "answer": "No." },
+        { "id": 169, "question": "What is StackOverflowError?", "answer": "Thrown when stack memory is full, usually due to deep recursion." },
+        { "id": 170, "question": "What is OutOfMemoryError?", "answer": "Thrown when JVM cannot allocate an object because it is out of memory." }
       ]
     },
     {
@@ -120,7 +190,17 @@
         { "id": 87, "question": "What is ExecutorService?", "answer": "Manages thread pools." },
         { "id": 88, "question": "What is JVM memory structure?", "answer": "Heap, stack, metaspace." },
         { "id": 89, "question": "What is garbage collection?", "answer": "Automatic memory management." },
-        { "id": 90, "question": "What is stop-the-world?", "answer": "Pauses application during GC." }
+        { "id": 90, "question": "What is stop-the-world?", "answer": "Pauses application during GC." },
+        { "id": 171, "question": "What is race condition?", "answer": "When multiple threads access shared data concurrently and the outcome depends on execution order." },
+        { "id": 172, "question": "What is synchronized method vs synchronized block?", "answer": "Method locks the whole object (this); block locks a specific object." },
+        { "id": 173, "question": "What is thread starvation?", "answer": "When a thread is unable to gain regular access to shared resources and is unable to make progress." },
+        { "id": 174, "question": "What is wait() and notify()?", "answer": "Methods defined in Object class for inter-thread communication." },
+        { "id": 175, "question": "Why wait(), notify() are in Object class?", "answer": "Because locks are on objects, not threads." },
+        { "id": 176, "question": "What is thread pool?", "answer": "A collection of pre-initialized threads ready to perform tasks." },
+        { "id": 177, "question": "What is Callable and Future?", "answer": "Callable is like Runnable but returns a result; Future represents the result of an asynchronous computation." },
+        { "id": 178, "question": "What is AtomicInteger?", "answer": "An int value that may be updated atomically (thread-safe without explicit locking)." },
+        { "id": 179, "question": "What is ThreadLocal?", "answer": "Provides thread-local variables (each thread has its own copy)." },
+        { "id": 180, "question": "What is a daemon thread?", "answer": "A low-priority thread that runs in the background (e.g., GC)." }
       ]
     },
     {
@@ -136,7 +216,27 @@
         { "id": 97, "question": "What is default method?", "answer": "Method with implementation in interface." },
         { "id": 98, "question": "What is immutable object?", "answer": "Object whose state cannot change." },
         { "id": 99, "question": "How to make class immutable?", "answer": "Final fields, no setters." },
-        { "id": 100, "question": "What is reflection?", "answer": "Inspecting classes at runtime." }
+        { "id": 100, "question": "What is reflection?", "answer": "Inspecting classes at runtime." },
+        { "id": 181, "question": "What is Predicate interface?", "answer": "Functional interface taking one argument and returning boolean." },
+        { "id": 182, "question": "What is Consumer interface?", "answer": "Functional interface taking one argument and returning no result (void)." },
+        { "id": 183, "question": "What is Supplier interface?", "answer": "Functional interface taking no arguments and returning a result." },
+        { "id": 184, "question": "What is Function interface?", "answer": "Functional interface taking one argument and returning a result." },
+        { "id": 185, "question": "What is Stream.map()?", "answer": "Transforms each element in the stream." },
+        { "id": 186, "question": "What is Stream.filter()?", "answer": "Filters elements based on a predicate." },
+        { "id": 187, "question": "What is Stream.reduce()?", "answer": "Combines elements of a stream into a single result." },
+        { "id": 188, "question": "What is parallel stream?", "answer": "Splits the stream into multiple chunks to process in parallel." },
+        { "id": 189, "question": "What are Java Modules (Jigsaw)?", "answer": "Introduced in Java 9 to modularize the JDK and applications." },
+        { "id": 190, "question": "What is var keyword?", "answer": "Local variable type inference introduced in Java 10." },
+        { "id": 191, "question": "What are Records?", "answer": "Concise way to create immutable data carrier classes (Java 14/16)." },
+        { "id": 192, "question": "What are Sealed Classes?", "answer": "Restricts which other classes or interfaces may extend or implement them (Java 15/17)." },
+        { "id": 193, "question": "What is Text Block?", "answer": "Multi-line string literal (Java 13/15)." },
+        { "id": 194, "question": "What is Switch Expression?", "answer": "Enhanced switch that can return a value (Java 12/14)." },
+        { "id": 195, "question": "What is Pattern Matching for instanceof?", "answer": "Allows casting variable directly in the condition (Java 14/16)." },
+        { "id": 196, "question": "What is serialization?", "answer": "Converting an object state into a byte stream." },
+        { "id": 197, "question": "What is serialVersionUID?", "answer": "Unique ID used during deserialization to verify sender and receiver have compatible classes." },
+        { "id": 198, "question": "What is transient keyword?", "answer": "Prevents a field from being serialized." },
+        { "id": 199, "question": "What is externalization?", "answer": "Custom serialization logic by implementing Externalizable interface." },
+        { "id": 200, "question": "What is JIT compiler?", "answer": "Just-In-Time compiler optimizes bytecode to native code at runtime." }
       ]
     }
   ]
