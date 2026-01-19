@@ -272,10 +272,10 @@ export default function Results() {
                                             )}
                                         </div>
                                     </AccordionTab>
-                                    <AccordionTab header={<span className="font-semibold">Correct Answer / Reference</span>}>
-                                         <div className="surface-ground p-3 border-round text-700 line-height-3">
-                                            {answer.correctAnswer}
-                                         </div>
+                                    <AccordionTab header={<span className="font-semibold text-indigo-700">Recommended Answer (Memorize this!)</span>}>
+                                        <div className="surface-50 p-3 border-round text-900 line-height-3 border-left-3 border-indigo-500">
+                                            {answer.evaluation.sampleAnswer || "No sample answer generated."}
+                                        </div>
                                     </AccordionTab>
                                 </Accordion>
                             )}

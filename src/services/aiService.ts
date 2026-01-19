@@ -29,6 +29,7 @@ export interface EvaluationResult {
     grade: string;
     dimensions: RubricDimensions;
     feedback: string; // General summary
+    sampleAnswer: string; // Concise model answer
     strengths: string[];
     improvements: string[];
 }
@@ -93,7 +94,9 @@ export const evaluateAnswer = async (
         1. Score each dimension on a scale of 0 to 5 based on the anchors.
         2. Calculate the final weighted score (0-100).
         3. Assign a letter Grade (A, B, C, D, F).
-        4. Provide constructive feedback.
+        4. Provide concise constructive feedback (max 2-3 sentences).
+        5. Provide a "sampleAnswer" which is an ideal, concise response (max 3-4 sentences) that the user can memorize.
+        6. List max 2 key strengths and 2 key improvements.
         
         Return the response in valid JSON format ONLY, matching this structure:
         {
@@ -108,6 +111,7 @@ export const evaluateAnswer = async (
                 "clarity": number
             },
             "feedback": "string",
+            "sampleAnswer": "string",
             "strengths": ["string", "string"],
             "improvements": ["string", "string"]
         }
@@ -133,6 +137,7 @@ export const evaluateAnswer = async (
                 clarity: 0
             },
             feedback: "AI Evaluation failed. Please check your API key.",
+            sampleAnswer: "N/A",
             strengths: [],
             improvements: ["System error."]
         };

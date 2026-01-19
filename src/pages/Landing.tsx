@@ -14,7 +14,7 @@ export default function Landing() {
                 <span className="block text-6xl font-bold mb-1">Master Your Skills</span>
                 <div className="text-6xl text-primary font-bold mb-3">with AI Feedback</div>
                 <p className="mt-0 mb-4 text-700 line-height-3 text-xl">
-                    Practice interview questions, get instant AI-powered grading, and track your progress across React, Java, and TypeScript.
+                    Practice interview questions, get instant AI-powered grading, and track your progress across React, Java, TypeScript and others.
                 </p>
 
                 <div className="flex gap-3 justify-content-center md:justify-content-start">

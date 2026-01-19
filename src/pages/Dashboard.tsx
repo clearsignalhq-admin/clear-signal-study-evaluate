@@ -22,6 +22,7 @@ export default function Dashboard() {
     const navigate = useNavigate()
     const [selectedSubject, setSelectedSubject] = useState<SubjectOption | null>(null)
     const [questionCount, setQuestionCount] = useState<number>(10)
+    const [strategy, setStrategy] = useState<string>('random')
 
     // In a real app, we'd load these dynamically. For now, we map the JSONs we have.
     const subjects: SubjectOption[] = [
@@ -31,9 +32,15 @@ export default function Dashboard() {
         { name: 'JavaScript', code: 'javascript', totalQuestions: jsQuestions.totalQuestions },
     ]
 
+    const strategyOptions = [
+        { label: 'Random Mix', value: 'random' },
+        { label: 'Not Answered Yet', value: 'not_answered' },
+        { label: 'Least Answered', value: 'least_answered' }
+    ];
+
     const handleStartExam = () => {
         if (selectedSubject) {
-            navigate(`/exam/${selectedSubject.code}?count=${questionCount}`)
+            navigate(`/exam/${selectedSubject.code}?count=${questionCount}&strategy=${strategy}`)
         }
     }
 
@@ -67,6 +74,20 @@ export default function Dashboard() {
                                     options={subjects}
                                     optionLabel="name"
                                     placeholder="Choose a Subject"
+                                    className="w-full"
+                                    pt={{
+                                        root: { className: 'border-round-lg' }
+                                    }}
+                                />
+                            </div>
+
+                            <div className="flex flex-column gap-2">
+                                <label htmlFor="strategy" className="font-medium text-900">Smart Question Selection</label>
+                                <Dropdown
+                                    id="strategy"
+                                    value={strategy}
+                                    onChange={(e) => setStrategy(e.value)}
+                                    options={strategyOptions}
                                     className="w-full"
                                     pt={{
                                         root: { className: 'border-round-lg' }

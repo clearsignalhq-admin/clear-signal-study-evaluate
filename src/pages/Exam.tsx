@@ -6,7 +6,7 @@ import { Button } from 'primereact/button'
 import { InputTextarea } from 'primereact/inputtextarea'
 import { ProgressBar } from 'primereact/progressbar'
 import { Dialog } from 'primereact/dialog'
-import { questionService } from '../services/questionService'
+import { questionService, type QuestionStrategy } from '../services/questionService'
 import type {Question} from '../types'
 
 interface UserAnswer {
@@ -19,11 +19,11 @@ interface UserAnswer {
 
 // Internal component that handles the active exam session
 // We use a separate component so we can use the 'key' prop to reset state automatically
-function ExamSession({ subjectId, count }: { subjectId: string, count: number }) {
+function ExamSession({ subjectId, count, strategy }: { subjectId: string, count: number, strategy: QuestionStrategy }) {
     const navigate = useNavigate()
 
     const [questions] = useState<Question[]>(() => {
-        return questionService.getRandomQuestions(subjectId, count)
+        return questionService.getQuestions(subjectId, count, strategy)
     })
     
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -182,6 +182,7 @@ export default function Exam() {
     
     // Default count to 10 if not provided
     const count = parseInt(searchParams.get('count') || '10')
+    const strategy = (searchParams.get('strategy') || 'random') as QuestionStrategy
 
     if (!subjectId) {
         return <div>Invalid Subject</div>
@@ -191,9 +192,10 @@ export default function Exam() {
     // which resets all internal state (currentIndex, answers, etc.) automatically.
     return (
         <ExamSession 
-            key={`${subjectId}-${count}`}
+            key={`${subjectId}-${count}-${strategy}`}
             subjectId={subjectId} 
             count={count} 
+            strategy={strategy}
         />
     )
 }

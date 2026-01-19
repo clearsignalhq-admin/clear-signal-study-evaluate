@@ -3,17 +3,30 @@
 :root {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
-  color: #495057;
-  background-color: #eff3f8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #6366f1;
+  --primary-color-text: #ffffff;
+
+  --text-color: #334155;
+  --text-color-secondary: #64748b;
+
+  --surface-ground: #f8fafc;
+  --surface-section: #ffffff;
+  --surface-card: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-border: #e2e8f0;
+  --surface-hover: #f1f5f9;
 }
+
 
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #eff3f8;
+  background: linear-gradient(109.6deg, rgb(245, 247, 252) 11.2%, rgb(224, 231, 240) 91.1%);
+  background-attachment: fixed;
 }
 
 /* Overrides for Sakai-like look */
@@ -22,20 +35,20 @@ body {
 }
 
 .card {
-    background: #ffffff;
+    background: var(--surface-card);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Typography Overrides */
 h1, h2, h3, h4, h5, h6 {
     margin: 1.5rem 0 1rem 0;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
-    color: #343a40;
+    color: var(--text-color);
 }
 
 h1 { font-size: 2.5rem; }
@@ -46,8 +59,9 @@ h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
 p {
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0 0 1rem 0;
+    color: var(--text-color-secondary);
 }
 
 /* Link Styles */
@@ -62,15 +76,16 @@ a:hover {
 
 /* PrimeReact Customizations */
 .p-card {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-    border-radius: 12px !important;
-    border: none !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--surface-border) !important;
 }
 
 .p-button {
-    border-radius: 8px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
 }
 
 .p-inputtext {
-    border-radius: 8px !important;
+    border-radius: 12px !important;
 }
