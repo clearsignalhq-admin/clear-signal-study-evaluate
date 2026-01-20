@@ -1,18 +1,38 @@
 
 import { Button } from 'primereact/button'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { useAuth } from '../context/useAuth'
 
 export default function Landing() {
   const { user } = useAuth()
 
   return (
+    <>
+    <Helmet>
+        <title>Master Technical Interviews with AI Feedback | Clear Signal</title>
+        <meta name="description" content="Practice React, Java, TypeScript, Spring, and Node.js interview questions. Get instant AI-powered grading and track your progress to ace your next technical interview." />
+        <meta name="keywords" content="technical interview, coding interview, mock interview, AI grading, React interview questions, Java interview questions, Node.js interview questions" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://clearsignal.study/" />
+        <meta property="og:title" content="Master Technical Interviews with AI Feedback" />
+        <meta property="og:description" content="Practice real-world interview questions and get instant AI-powered feedback." />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Master Technical Interviews with AI Feedback" />
+        <meta property="twitter:description" content="Practice real-world interview questions and get instant AI-powered feedback." />
+    </Helmet>
     <div className="flex flex-column" style={{ minHeight: '80vh' }}>
       <div className="grid grid-nogutter surface-section text-800">
         <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
             <section>
-                <span className="block text-6xl font-bold mb-1">Master Your Skills</span>
-                <div className="text-6xl text-primary font-bold mb-3">with AI Feedback</div>
+                <h1 className="text-6xl font-bold mb-3 mt-0 line-height-2">
+                    <span className="block text-900 mb-1">Master Your Skills</span>
+                    <span className="block text-primary">with AI Feedback</span>
+                </h1>
                 <p className="mt-0 mb-4 text-700 line-height-3 text-xl">
                     Practice interview questions, get instant AI-powered grading, and track your progress across React, Java, TypeScript and others.
                 </p>
@@ -40,8 +60,8 @@ export default function Landing() {
 
       <div className="surface-ground px-4 py-8 md:px-6 lg:px-8">
         <div className="text-center mb-5">
-            <div className="text-900 text-3xl font-bold mb-2">Why Study Evaluate?</div>
-            <div className="text-600 text-xl">Everything you need to ace your next technical interview.</div>
+            <h2 className="text-900 text-3xl font-bold mb-2 mt-0">Why Study Evaluate?</h2>
+            <p className="text-600 text-xl m-0">Everything you need to ace your next technical interview.</p>
         </div>
 
         <div className="grid">
@@ -49,25 +69,26 @@ export default function Landing() {
                 <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
                     <i className="pi pi-list text-4xl text-blue-500"></i>
                 </span>
-                <div className="text-900 mb-3 font-medium text-xl">Subject Selection</div>
+                <h3 className="text-900 mb-3 font-medium text-xl mt-0">Subject Selection</h3>
                 <span className="text-700 line-height-3">Choose from a comprehensive library of questions in React, Java, TypeScript, and more to target your weak spots.</span>
             </div>
             <div className="col-12 md:col-4 mb-4 px-5">
                 <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
                     <i className="pi pi-bolt text-4xl text-orange-500"></i>
                 </span>
-                <div className="text-900 mb-3 font-medium text-xl">Real-time Feedback</div>
+                <h3 className="text-900 mb-3 font-medium text-xl mt-0">Real-time Feedback</h3>
                 <span className="text-700 line-height-3">Don't wait for a human reviewer. Get instant, detailed evaluation on your answers powered by advanced AI.</span>
             </div>
             <div className="col-12 md:col-4 mb-4 px-5">
                 <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>
                     <i className="pi pi-chart-bar text-4xl text-green-500"></i>
                 </span>
-                <div className="text-900 mb-3 font-medium text-xl">Track Progress</div>
+                <h3 className="text-900 mb-3 font-medium text-xl mt-0">Track Progress</h3>
                 <span className="text-700 line-height-3">Monitor your performance over time. See your average scores improve and identify areas that need more focus.</span>
             </div>
         </div>
       </div>
     </div>
+    </>
   )
 }

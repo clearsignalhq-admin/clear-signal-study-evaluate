@@ -5,6 +5,7 @@ import javaQuestions from '../data/questions/java_exam_v1_200_questions.json'
 import tsQuestions from '../data/questions/typescript_exam_v1.json'
 import jsQuestions from '../data/questions/javascript_exam_100_questions.json'
 import springQuestions from '../data/questions/spring_hibernate_exam_100_questions.json'
+import nodeQuestions from '../data/questions/nodejs_exam_100_questions.json'
 
 // Map of subject codes to their data
 const subjectData: Record<string, Subject> = {
@@ -12,7 +13,8 @@ const subjectData: Record<string, Subject> = {
     'java': javaQuestions,
     'typescript': tsQuestions,
     'javascript': jsQuestions,
-    'spring-hibernate': springQuestions
+    'spring-hibernate': springQuestions,
+    'nodejs': nodeQuestions
 }
 
 export type QuestionStrategy = 'random' | 'not_answered' | 'least_answered';
