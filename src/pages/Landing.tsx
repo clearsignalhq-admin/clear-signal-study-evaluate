@@ -1,30 +1,12 @@
 
 import { Button } from 'primereact/button'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { useAuth } from '../context/useAuth'
 
 export default function Landing() {
   const { user } = useAuth()
 
   return (
-    <>
-    <Helmet>
-        <title>Master Technical Interviews with AI Feedback | Clear Signal</title>
-        <meta name="description" content="Practice React, Java, TypeScript, Spring, and Node.js interview questions. Get instant AI-powered grading and track your progress to ace your next technical interview." />
-        <meta name="keywords" content="technical interview, coding interview, mock interview, AI grading, React interview questions, Java interview questions, Node.js interview questions" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://clearsignal.study/" />
-        <meta property="og:title" content="Master Technical Interviews with AI Feedback" />
-        <meta property="og:description" content="Practice real-world interview questions and get instant AI-powered feedback." />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Master Technical Interviews with AI Feedback" />
-        <meta property="twitter:description" content="Practice real-world interview questions and get instant AI-powered feedback." />
-    </Helmet>
     <div className="flex flex-column" style={{ minHeight: '80vh' }}>
       <div className="grid grid-nogutter surface-section text-800">
         <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
@@ -89,6 +71,5 @@ export default function Landing() {
         </div>
       </div>
     </div>
-    </>
   )
 }
