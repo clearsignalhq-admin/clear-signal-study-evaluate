@@ -7,6 +7,8 @@ import Dashboard from './pages/Dashboard'
 import Exam from './pages/Exam'
 import Results from './pages/Results'
 import History from './pages/History'
+import ReportCard from './pages/ReportCard'
+import SubjectReport from './pages/SubjectReport'
 
 function App() {
   return (
@@ -19,6 +21,18 @@ function App() {
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/report-card" element={
+            <ProtectedRoute>
+              <ReportCard />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/report-card/:subjectId" element={
+            <ProtectedRoute>
+              <SubjectReport />
             </ProtectedRoute>
           } />
 

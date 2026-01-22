@@ -6,6 +6,7 @@ import tsQuestions from '../data/questions/typescript_exam_v1.json'
 import jsQuestions from '../data/questions/javascript_exam_100_questions.json'
 import springQuestions from '../data/questions/spring_hibernate_exam_100_questions.json'
 import nodeQuestions from '../data/questions/nodejs_exam_100_questions.json'
+import systemDesignQuestions from '../data/questions/system_design_exam_100_questions.json'
 
 // Map of subject codes to their data
 const subjectData: Record<string, Subject> = {
@@ -14,7 +15,8 @@ const subjectData: Record<string, Subject> = {
     'typescript': tsQuestions,
     'javascript': jsQuestions,
     'spring-hibernate': springQuestions,
-    'nodejs': nodeQuestions
+    'nodejs': nodeQuestions,
+    'system-design': systemDesignQuestions
 }
 
 export type QuestionStrategy = 'random' | 'not_answered' | 'least_answered';
@@ -26,6 +28,18 @@ interface ExamHistoryItem {
 export const questionService = {
     getSubject(subjectId: string): Subject | null {
         return subjectData[subjectId] as Subject || null;
+    },
+
+    getSubjects(): { code: string; name: string; totalQuestions: number }[] {
+        return [
+            { name: 'React', code: 'react', totalQuestions: reactQuestions.totalQuestions },
+            { name: 'Java', code: 'java', totalQuestions: javaQuestions.totalQuestions },
+            { name: 'TypeScript', code: 'typescript', totalQuestions: tsQuestions.totalQuestions },
+            { name: 'JavaScript', code: 'javascript', totalQuestions: jsQuestions.totalQuestions },
+            { name: 'Spring & Hibernate', code: 'spring-hibernate', totalQuestions: springQuestions.totalQuestions },
+            { name: 'Node.js', code: 'nodejs', totalQuestions: nodeQuestions.totalQuestions },
+            { name: 'System Design', code: 'system-design', totalQuestions: systemDesignQuestions.totalQuestions },
+        ];
     },
 
     getQuestions(subjectId: string, count: number, strategy: QuestionStrategy = 'random'): Question[] {

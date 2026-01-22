@@ -16,7 +16,7 @@ export default function Landing() {
                     <span className="block text-primary">with AI Feedback</span>
                 </h1>
                 <p className="mt-0 mb-4 text-700 line-height-3 text-xl">
-                    Practice interview questions, get instant AI-powered grading, and track your progress across React, Java, TypeScript and others.
+                    Practice interview questions, get instant AI-powered grading, and track your progress across React, Java, System Design and others.
                 </p>
 
                 <div className="flex gap-3 justify-content-center md:justify-content-start">
@@ -52,7 +52,7 @@ export default function Landing() {
                     <i className="pi pi-list text-4xl text-blue-500"></i>
                 </span>
                 <h3 className="text-900 mb-3 font-medium text-xl mt-0">Subject Selection</h3>
-                <span className="text-700 line-height-3">Choose from a comprehensive library of questions in React, Java, TypeScript, and more to target your weak spots.</span>
+                <span className="text-700 line-height-3">Choose from a comprehensive library of questions in React, Java, System Design, and more to target your weak spots.</span>
             </div>
             <div className="col-12 md:col-4 mb-4 px-5">
                 <span className="p-3 shadow-2 mb-3 inline-block surface-card" style={{ borderRadius: '10px' }}>

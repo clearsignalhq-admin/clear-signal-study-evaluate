@@ -21,6 +21,12 @@ export default function AppLayout() {
       command: () => navigate('/dashboard'),
       visible: !!user
     },
+    {
+      label: 'Report Card',
+      icon: 'pi pi-chart-bar',
+      command: () => navigate('/report-card'),
+      visible: !!user
+    },
   ]
 
   const start = <div className="text-xl font-bold text-primary mr-4">Study Evaluate</div>
