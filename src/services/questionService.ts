@@ -1,4 +1,5 @@
 
+// Question Service - Manages subject data and exam generation
 import {type Subject, type Question } from '../types'
 import reactQuestions from '../data/questions/react_exam_100_questions.json'
 import javaQuestions from '../data/questions/java_exam_v1_200_questions.json'
