@@ -5,15 +5,7 @@ import { Button } from 'primereact/button'
 import { Dropdown } from 'primereact/dropdown'
 import { InputNumber } from 'primereact/inputnumber'
 import { useNavigate } from 'react-router-dom'
-
-// Mock Data Service (Replace with actual service later)
-import reactQuestions from '../data/questions/react_exam_100_questions.json'
-import javaQuestions from '../data/questions/java_exam_v1_200_questions.json'
-import tsQuestions from '../data/questions/typescript_exam_v1.json'
-import jsQuestions from '../data/questions/javascript_exam_100_questions.json'
-import springQuestions from '../data/questions/spring_hibernate_exam_100_questions.json'
-import nodeQuestions from '../data/questions/nodejs_exam_100_questions.json'
-import systemDesignQuestions from '../data/questions/system_design_exam_100_questions.json'
+import { questionService } from '../services/questionService'
 
 interface SubjectOption {
     name: string;
@@ -27,16 +19,7 @@ export default function Dashboard() {
     const [questionCount, setQuestionCount] = useState<number>(10)
     const [strategy, setStrategy] = useState<string>('random')
 
-    // In a real app, we'd load these dynamically. For now, we map the JSONs we have.
-    const subjects: SubjectOption[] = [
-        { name: 'React', code: 'react', totalQuestions: reactQuestions.totalQuestions },
-        { name: 'Java', code: 'java', totalQuestions: javaQuestions.totalQuestions },
-        { name: 'TypeScript', code: 'typescript', totalQuestions: tsQuestions.totalQuestions },
-        { name: 'JavaScript', code: 'javascript', totalQuestions: jsQuestions.totalQuestions },
-        { name: 'Spring & Hibernate', code: 'spring-hibernate', totalQuestions: springQuestions.totalQuestions },
-        { name: 'Node.js', code: 'nodejs', totalQuestions: nodeQuestions.totalQuestions },
-        { name: 'System Design', code: 'system-design', totalQuestions: systemDesignQuestions.totalQuestions },
-    ]
+    const subjects: SubjectOption[] = questionService.getSubjects();
 
     const strategyOptions = [
         { label: 'Random Mix', value: 'random' },
