@@ -26,15 +26,13 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #ffffff;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
   color: var(--text-color);
 }
 
 #root {
   min-height: 100vh;
-  background: #ffffff;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
 }
 
 /* Overrides for Sakai-like look */
@@ -213,4 +211,20 @@ a:hover {
 @keyframes question-enter-prev {
     from { opacity: 0; transform: translateX(-14px); }
     to { opacity: 1; transform: translateX(0); }
+}
+html, body, #root {
+    background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%) !important;
+}
+.surface-ground,
+.surface-section,
+.surface-0,
+.surface-50,
+.surface-100 {
+    background-color: #ffffff !important;
+}
+
+.p-card,
+.card,
+.surface-card {
+    background-color: #ffffff !important;
 }
