@@ -1,0 +1,155 @@
+{
+  "subject": "CSS (and Related Tech)",
+  "version": "1.0",
+  "totalQuestions": 100,
+  "categories": [
+    {
+      "id": "css_core_concepts",
+      "title": "Core Concepts (Cascade, Specificity, Box Model)",
+      "questions": [
+        { "id": 1, "question": "What is the CSS cascade?", "answer": "The set of rules CSS uses to resolve conflicts between declarations: importance (!important), origin (user/author/UA), specificity, and source order." },
+        { "id": 2, "question": "How is selector specificity typically ranked?", "answer": "Inline styles > IDs > classes/attributes/pseudo-classes > elements/pseudo-elements." },
+        { "id": 3, "question": "Does !important always win?", "answer": "It wins within the same origin/importance level; conflicts between !important rules are still resolved by specificity and source order." },
+        { "id": 4, "question": "What is inheritance in CSS?", "answer": "Some properties (like color and font) inherit from parent to child; others (like margin) do not." },
+        { "id": 5, "question": "What is the initial value of a CSS property?", "answer": "The default value defined by CSS specs when no other value applies." },
+        { "id": 6, "question": "What does box-sizing: content-box mean?", "answer": "Width/height apply to the content only; padding and border add to the final rendered size." },
+        { "id": 7, "question": "What does box-sizing: border-box mean?", "answer": "Width/height include padding and border, making layout sizing more predictable." },
+        { "id": 8, "question": "How do margin collapsing rules work (in simple terms)?", "answer": "Vertical margins between block elements can collapse into a single margin (usually the larger one)." },
+        { "id": 9, "question": "What’s the difference between a block and an inline element?", "answer": "Block elements start on a new line and can have width/height; inline elements flow in text and ignore width/height by default." },
+        { "id": 10, "question": "What does display: inline-block do?", "answer": "It flows inline like text but supports width/height like a block." },
+        { "id": 11, "question": "What is the difference between visibility: hidden and opacity: 0?", "answer": "Both hide visually, but visibility:hidden prevents interaction while opacity:0 can still be clickable unless pointer-events is changed." },
+        { "id": 12, "question": "What does pointer-events: none do?", "answer": "Prevents the element from receiving mouse/pointer interactions." },
+        { "id": 13, "question": "What does the universal selector (*) select?", "answer": "All elements." },
+        { "id": 14, "question": "What are attribute selectors used for?", "answer": "To target elements based on attributes (e.g., input[type='email'])." },
+        { "id": 15, "question": "What is the difference between :nth-child and :nth-of-type?", "answer": ":nth-child counts all children; :nth-of-type counts only siblings of the same element type." },
+        { "id": 16, "question": "What is the difference between ::before and :before?", "answer": "They are equivalent in most browsers, but ::before is the modern pseudo-element syntax." },
+        { "id": 17, "question": "When does z-index apply?", "answer": "Primarily on positioned elements (or flex/grid items in certain cases) within a stacking context." },
+        { "id": 18, "question": "What creates a new stacking context?", "answer": "Examples: position with z-index, opacity < 1, transform, filter, isolation:isolate, and others." },
+        { "id": 19, "question": "What is the difference between rem and em?", "answer": "rem is relative to the root font-size; em is relative to the element’s computed font-size (often the parent)." },
+        { "id": 20, "question": "What’s a common reason to prefer rem for spacing?", "answer": "It scales consistently with user font-size settings and avoids compounding in nested elements." }
+      ]
+    },
+    {
+      "id": "layout_flexbox_grid",
+      "title": "Layout: Flexbox, Grid, Positioning",
+      "questions": [
+        { "id": 21, "question": "What is the main axis in flexbox?", "answer": "The axis along which flex items are laid out; it’s controlled by flex-direction." },
+        { "id": 22, "question": "What is the cross axis in flexbox?", "answer": "The axis perpendicular to the main axis." },
+        { "id": 23, "question": "What does justify-content control in a flex container?", "answer": "Distribution and alignment of items along the main axis." },
+        { "id": 24, "question": "What does align-items control in a flex container?", "answer": "Alignment of items along the cross axis for the whole line." },
+        { "id": 25, "question": "What does align-self do?", "answer": "Overrides align-items for a single flex/grid item." },
+        { "id": 26, "question": "What does flex: 1 mean?", "answer": "Shorthand for flex-grow: 1, flex-shrink: 1, flex-basis: 0% (commonly), allowing the item to grow and share remaining space." },
+        { "id": 27, "question": "What does flex-basis control?", "answer": "The initial main-size of a flex item before free space is distributed." },
+        { "id": 28, "question": "What problem does gap solve in flex/grid layouts?", "answer": "It creates consistent spacing between items without needing margins and avoiding edge-case math." },
+        { "id": 29, "question": "How do you create a two-column layout with CSS Grid?", "answer": "Use display:grid and grid-template-columns: 1fr 1fr (or other fractions)." },
+        { "id": 30, "question": "What is the difference between auto-fill and auto-fit in CSS Grid?", "answer": "Both repeat tracks, but auto-fit collapses empty tracks to fit content, while auto-fill keeps the track slots reserved." },
+        { "id": 31, "question": "What is an implicit grid?", "answer": "Grid tracks created automatically when items are placed outside the explicit grid defined by grid-template-rows/columns." },
+        { "id": 32, "question": "What’s the difference between position: relative and position: absolute?", "answer": "relative offsets the element from its normal position; absolute removes it from flow and positions it relative to the nearest positioned ancestor." },
+        { "id": 33, "question": "What does position: sticky do?", "answer": "It behaves like relative until a scroll threshold, then sticks like fixed within its scroll container." },
+        { "id": 34, "question": "How do you center an element horizontally with margin?", "answer": "Give it a width and use margin-left/right: auto (e.g., margin: 0 auto)." },
+        { "id": 35, "question": "How do you avoid layout shift when loading images?", "answer": "Reserve space using width/height or an aspect-ratio box, so the page doesn’t reflow." },
+        { "id": 36, "question": "What does aspect-ratio do?", "answer": "Provides an intrinsic ratio used for sizing, often to maintain consistent boxes." },
+        { "id": 37, "question": "What is a containing block?", "answer": "The reference box used for percentage-based sizing and for positioning absolutely positioned elements." },
+        { "id": 38, "question": "What does overflow: auto do?", "answer": "Adds scrollbars only when content overflows." },
+        { "id": 39, "question": "What is the difference between overflow-x and overflow-y?", "answer": "They control overflow behavior independently on the horizontal and vertical axes." },
+        { "id": 40, "question": "What is a common cause of “flex items not shrinking”?", "answer": "Items can overflow because min-width defaults to auto; setting min-width: 0 on children often fixes it." }
+      ]
+    },
+    {
+      "id": "responsive_and_media",
+      "title": "Responsive Design & Media Queries",
+      "questions": [
+        { "id": 41, "question": "What is a media query?", "answer": "A CSS technique to apply styles based on device/viewport characteristics like width, resolution, or prefers-color-scheme." },
+        { "id": 42, "question": "What is mobile-first CSS?", "answer": "Write base styles for small screens first, then use min-width media queries to enhance for larger screens." },
+        { "id": 43, "question": "What does @media (min-width: 768px) mean?", "answer": "Apply the enclosed styles when the viewport width is at least 768px." },
+        { "id": 44, "question": "What is the difference between px and viewport units (vw/vh)?", "answer": "px is fixed; vw/vh are relative to the viewport dimensions." },
+        { "id": 45, "question": "What are container queries (high level)?", "answer": "They let styles respond to the size of a container rather than the viewport." },
+        { "id": 46, "question": "Why are rem units helpful for accessibility?", "answer": "They respect user font scaling, making layouts and typography easier to enlarge." },
+        { "id": 47, "question": "What is prefers-reduced-motion used for?", "answer": "To reduce or disable animations/transitions for users who request less motion." },
+        { "id": 48, "question": "What is prefers-color-scheme used for?", "answer": "To apply light/dark theme styles based on the user’s OS setting." },
+        { "id": 49, "question": "What does max-width: 100% on images do?", "answer": "Prevents images from overflowing their containers on smaller screens." },
+        { "id": 50, "question": "What is the difference between min(), max(), and clamp()?", "answer": "They compute dynamic values: min picks the smallest, max picks the largest, clamp clamps between a min and max with a preferred value." },
+        { "id": 51, "question": "Give an example of clamp() usage.", "answer": "Responsive font size like font-size: clamp(1rem, 2vw + 0.5rem, 2rem)." },
+        { "id": 52, "question": "What is a breakpoint?", "answer": "A viewport (or container) size at which layout or styling changes for better usability." },
+        { "id": 53, "question": "What is the viewport meta tag used for?", "answer": "On mobile, it controls layout viewport scaling; without it, responsive CSS can behave unexpectedly." },
+        { "id": 54, "question": "What is a fluid layout?", "answer": "A layout that adapts smoothly using relative units instead of fixed pixel widths." },
+        { "id": 55, "question": "What is the difference between responsive and adaptive design?", "answer": "Responsive continuously adapts; adaptive switches between discrete layouts at breakpoints." }
+      ]
+    },
+    {
+      "id": "typography_colors",
+      "title": "Typography, Colors, and Visual Styling",
+      "questions": [
+        { "id": 56, "question": "What does line-height control?", "answer": "The height of each line of text, affecting readability and vertical rhythm." },
+        { "id": 57, "question": "What is the difference between font-weight: 400 and 700?", "answer": "400 is normal weight; 700 is bold (assuming the font has those weights)." },
+        { "id": 58, "question": "What is a web-safe font?", "answer": "A font likely installed on most systems (e.g., Arial), reducing dependency on downloads." },
+        { "id": 59, "question": "What is the difference between hex and rgb colors?", "answer": "Both represent colors; hex is base-16 notation (#RRGGBB) and rgb is functional notation (rgb(r,g,b))." },
+        { "id": 60, "question": "What is HSL and why use it?", "answer": "Hue/Saturation/Lightness; it’s often easier to tweak theme colors by adjusting lightness or saturation." },
+        { "id": 61, "question": "What does currentColor mean?", "answer": "It resolves to the element’s computed color value (useful for icons/borders)." },
+        { "id": 62, "question": "What does border-radius do?", "answer": "Rounds corners of an element’s border box." },
+        { "id": 63, "question": "How do box-shadow and drop-shadow differ?", "answer": "box-shadow follows the box; filter: drop-shadow follows the alpha shape (useful for images/SVG)." },
+        { "id": 64, "question": "What is a CSS gradient?", "answer": "A generated image (linear-gradient, radial-gradient) that can be used as a background." },
+        { "id": 65, "question": "What does background-size: cover do?", "answer": "Scales the background image to cover the container, possibly cropping." },
+        { "id": 66, "question": "What’s the difference between outline and border?", "answer": "Outline doesn’t take up space and doesn’t affect layout; border does." },
+        { "id": 67, "question": "Why is :focus-visible useful?", "answer": "It shows focus styles only when focus is likely from keyboard, reducing noisy outlines on mouse click." }
+      ]
+    },
+    {
+      "id": "transforms_animations",
+      "title": "Transforms, Transitions, Animations",
+      "questions": [
+        { "id": 68, "question": "What is a CSS transition?", "answer": "An animation between two states when a property changes (e.g., on hover)." },
+        { "id": 69, "question": "What properties are best to animate for performance?", "answer": "transform and opacity (they often avoid layout and paint)." },
+        { "id": 70, "question": "What does transform: translateZ(0) sometimes do?", "answer": "It can promote an element to its own layer on some browsers, potentially improving animation smoothness." },
+        { "id": 71, "question": "What is a CSS keyframe animation?", "answer": "An animation defined with @keyframes, controlling styles at different percentages over time." },
+        { "id": 72, "question": "What does animation-fill-mode do?", "answer": "Controls how styles apply before/after the animation (e.g., forwards keeps the final state)." },
+        { "id": 73, "question": "What is easing in transitions?", "answer": "The timing function controlling acceleration/deceleration (e.g., ease-in-out, cubic-bezier)." },
+        { "id": 74, "question": "What is will-change used for?", "answer": "Hints to the browser that an element will change, potentially optimizing rendering (use sparingly)." },
+        { "id": 75, "question": "What does the CSS property transform-origin do?", "answer": "Sets the point around which transforms are applied." },
+        { "id": 76, "question": "How do you disable animations for reduced motion?", "answer": "Use @media (prefers-reduced-motion: reduce) to set animation: none and transition: none (or reduce durations)." }
+      ]
+    },
+    {
+      "id": "modern_css_features",
+      "title": "Modern CSS Features",
+      "questions": [
+        { "id": 77, "question": "What are CSS custom properties (CSS variables)?", "answer": "Variables defined like --primary: #... that can be reused with var(--primary) and participate in the cascade." },
+        { "id": 78, "question": "How do CSS variables differ from Sass variables?", "answer": "CSS variables exist at runtime and can change per scope; Sass variables are compile-time constants." },
+        { "id": 79, "question": "What is calc() used for?", "answer": "To compute values from mixed units (e.g., width: calc(100% - 2rem))." },
+        { "id": 80, "question": "What is :is() used for?", "answer": "To group selectors without increasing specificity too much (e.g., :is(h1,h2,h3))." },
+        { "id": 81, "question": "What is :where() used for?", "answer": "Like :is() but it has zero specificity, useful for low-specificity defaults." },
+        { "id": 82, "question": "What is the :has() selector?", "answer": "A relational selector that can style an element based on its descendants/children matching a selector (parent selector behavior)." },
+        { "id": 83, "question": "What is accent-color used for?", "answer": "To theme form controls like checkboxes and radio buttons in supported browsers." },
+        { "id": 84, "question": "What is scroll-behavior: smooth?", "answer": "Enables smooth scrolling for anchor navigation (respect reduced motion preferences)." },
+        { "id": 85, "question": "What is object-fit used for?", "answer": "Controls how replaced elements like images/videos fit their boxes (cover/contain)." },
+        { "id": 86, "question": "What does @layer do?", "answer": "Defines cascade layers to control which groups of styles win regardless of source order." },
+        { "id": 87, "question": "What is the difference between logical properties (margin-inline) and physical ones (margin-left)?", "answer": "Logical properties adapt to writing direction and language, improving internationalization." }
+      ]
+    },
+    {
+      "id": "forms_accessibility",
+      "title": "Forms & Accessibility",
+      "questions": [
+        { "id": 88, "question": "Why should focus styles not be removed globally?", "answer": "They’re essential for keyboard users; removing them harms accessibility." },
+        { "id": 89, "question": "What is a common accessible approach to hiding text for screen readers only?", "answer": "Use a visually-hidden utility (e.g., position absolute, 1px size, clipped) so it remains readable by assistive tech." },
+        { "id": 90, "question": "What does aria-hidden=""true"" mean (conceptually)?", "answer": "It hides an element from the accessibility tree; the element remains visually present." },
+        { "id": 91, "question": "What is a common pitfall when styling form controls?", "answer": "Breaking default focus/keyboard behaviors; also inconsistent rendering across browsers." },
+        { "id": 92, "question": "Why is color contrast important?", "answer": "Low contrast reduces readability, especially for users with visual impairments; WCAG defines minimum ratios." }
+      ]
+    },
+    {
+      "id": "related_tooling",
+      "title": "Related Tech: Sass, PostCSS, Tailwind, CSS Modules",
+      "questions": [
+        { "id": 93, "question": "What is Sass/SCSS used for?", "answer": "A preprocessor that adds variables, nesting, mixins, modules, and more, compiling down to CSS." },
+        { "id": 94, "question": "What is PostCSS?", "answer": "A tool to transform CSS with JavaScript plugins (e.g., autoprefixer, nesting, minification)." },
+        { "id": 95, "question": "What does Autoprefixer do?", "answer": "Automatically adds vendor prefixes based on target browser support." },
+        { "id": 96, "question": "What is Tailwind CSS?", "answer": "A utility-first CSS framework where you compose styles by applying small utility classes." },
+        { "id": 97, "question": "What are CSS Modules?", "answer": "A build-time approach that scopes CSS class names locally to a component to avoid collisions." },
+        { "id": 98, "question": "What is BEM naming and why use it?", "answer": "Block__Element--Modifier; a convention to reduce ambiguity and keep CSS maintainable at scale." },
+        { "id": 99, "question": "What is CSS-in-JS (high level)?", "answer": "Styling approach where CSS is generated/managed in JavaScript (e.g., styled-components, emotion)." },
+        { "id": 100, "question": "What’s a common strategy to manage large CSS codebases?", "answer": "Use design tokens (variables), consistent conventions (BEM), component scoping (CSS Modules), and limit specificity using layers/utilities." }
+      ]
+    }
+  ]
+}

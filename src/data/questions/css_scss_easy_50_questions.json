@@ -1,0 +1,87 @@
+{
+  "subject": "CSS & SCSS (Easy)",
+  "version": "1.0",
+  "totalQuestions": 50,
+  "categories": [
+    {
+      "id": "css_basics",
+      "title": "CSS Basics",
+      "questions": [
+        { "id": 1, "question": "What does CSS stand for?", "answer": "Cascading Style Sheets." },
+        { "id": 2, "question": "What is a CSS rule made of?", "answer": "A selector and a declaration block (property: value pairs)." },
+        { "id": 3, "question": "What is the difference between a class and an id selector?", "answer": "A class can be reused; an id should be unique on a page." },
+        { "id": 4, "question": "How do you select an element by id in CSS?", "answer": "Use #idName (e.g., #header)." },
+        { "id": 5, "question": "How do you select elements by class in CSS?", "answer": "Use .className (e.g., .card)." },
+        { "id": 6, "question": "What does the “cascading” part of CSS mean?", "answer": "When multiple rules match, CSS resolves conflicts using specificity, importance, and source order." },
+        { "id": 7, "question": "What is specificity?", "answer": "A scoring system that decides which selector wins when multiple rules apply." },
+        { "id": 8, "question": "Which is more specific: .btn or button?", "answer": ".btn is more specific than the element selector button." },
+        { "id": 9, "question": "What does !important do?", "answer": "It forces a declaration to win over others (except other !important with higher specificity)." },
+        { "id": 10, "question": "What is the default display value for a <div>?", "answer": "block." }
+      ]
+    },
+    {
+      "id": "css_box_model",
+      "title": "Box Model & Sizing",
+      "questions": [
+        { "id": 11, "question": "What is the CSS box model?", "answer": "Content + padding + border + margin." },
+        { "id": 12, "question": "What does box-sizing: border-box do?", "answer": "Width/height include padding and border (content box shrinks accordingly)." },
+        { "id": 13, "question": "What’s the difference between margin and padding?", "answer": "Margin is space outside the border; padding is space inside the border." },
+        { "id": 14, "question": "What does overflow: hidden do?", "answer": "Clips content that overflows the element’s box." },
+        { "id": 15, "question": "What units are commonly used in CSS?", "answer": "px, %, em, rem, vw, vh." },
+        { "id": 16, "question": "What is the difference between em and rem?", "answer": "em is relative to the element (or parent) font-size; rem is relative to the root font-size." },
+        { "id": 17, "question": "What does max-width do?", "answer": "It limits the element’s width so it can’t grow beyond that value." },
+        { "id": 18, "question": "What does min-height do?", "answer": "It ensures the element is at least that tall, even if content is smaller." },
+        { "id": 19, "question": "What’s the difference between visibility: hidden and display: none?", "answer": "visibility:hidden keeps layout space; display:none removes the element from layout." },
+        { "id": 20, "question": "What does opacity: 0 do?", "answer": "Makes the element fully transparent but it still takes space and can receive events unless changed." }
+      ]
+    },
+    {
+      "id": "css_layout",
+      "title": "Layout (Flexbox, Grid, Positioning)",
+      "questions": [
+        { "id": 21, "question": "What does display: flex do?", "answer": "Turns an element into a flex container and lays out its children with flex rules." },
+        { "id": 22, "question": "How do you center items horizontally in flexbox?", "answer": "Use justify-content: center on the flex container." },
+        { "id": 23, "question": "How do you center items vertically in flexbox?", "answer": "Use align-items: center on the flex container (for a single row)." },
+        { "id": 24, "question": "What is the main axis in flexbox?", "answer": "The direction items flow, controlled by flex-direction." },
+        { "id": 25, "question": "What does flex-wrap do?", "answer": "Allows items to wrap onto multiple lines instead of staying on one line." },
+        { "id": 26, "question": "What does display: grid do?", "answer": "Creates a grid container for 2D layout with rows and columns." },
+        { "id": 27, "question": "How do you define grid columns?", "answer": "With grid-template-columns (e.g., repeat(3, 1fr))." },
+        { "id": 28, "question": "What is position: relative used for?", "answer": "It positions the element relative to its normal spot and creates a containing block for absolutely positioned children." },
+        { "id": 29, "question": "What is position: absolute relative to?", "answer": "Its nearest positioned ancestor (non-static), otherwise the initial containing block/page." },
+        { "id": 30, "question": "What does z-index control?", "answer": "Stacking order of positioned elements within the same stacking context." }
+      ]
+    },
+    {
+      "id": "css_selectors",
+      "title": "Selectors & Pseudo-classes",
+      "questions": [
+        { "id": 31, "question": "What is the descendant selector?", "answer": "A space, e.g., .card p selects p inside .card." },
+        { "id": 32, "question": "What is the child selector?", "answer": ">, e.g., .list > li selects direct children only." },
+        { "id": 33, "question": "What does :hover do?", "answer": "Applies styles when the user hovers over an element." },
+        { "id": 34, "question": "What does :focus do?", "answer": "Applies styles when an element is focused (e.g., input selected)." },
+        { "id": 35, "question": "What does :active do?", "answer": "Applies styles while an element is being activated (e.g., mouse down)." },
+        { "id": 36, "question": "What does :nth-child(n) select?", "answer": "Elements based on their position among siblings (e.g., :nth-child(2) is the 2nd child)." },
+        { "id": 37, "question": "What is a pseudo-element?", "answer": "A keyword like ::before or ::after that styles a part of an element." },
+        { "id": 38, "question": "How do you create a pseudo-element content?", "answer": "Use ::before/::after with the content property (e.g., content: '' )." },
+        { "id": 39, "question": "What does attribute selector [type=\"text\"] do?", "answer": "Selects elements with type=""text"" (e.g., <input type=\"text\">)." },
+        { "id": 40, "question": "What’s the difference between :first-child and :first-of-type?", "answer": ":first-child is the first child of its parent; :first-of-type is the first of that element type." }
+      ]
+    },
+    {
+      "id": "scss_basics",
+      "title": "SCSS Basics",
+      "questions": [
+        { "id": 41, "question": "What is SCSS?", "answer": "A Sass syntax that is a superset of CSS with variables, nesting, mixins, etc." },
+        { "id": 42, "question": "What are SCSS variables used for?", "answer": "To reuse values like colors and spacing (e.g., $primary: #6366f1;)." },
+        { "id": 43, "question": "What is nesting in SCSS?", "answer": "Writing selectors inside selectors to reflect hierarchy (use sparingly)." },
+        { "id": 44, "question": "What is a mixin in SCSS?", "answer": "A reusable block of styles that can take parameters (@mixin / @include)." },
+        { "id": 45, "question": "What is @include used for?", "answer": "To apply a mixin inside a selector." },
+        { "id": 46, "question": "What is the difference between a mixin and a function in SCSS?", "answer": "Mixins output CSS; functions return a value." },
+        { "id": 47, "question": "What is @extend used for?", "answer": "To share selector rules by extending another selector (can increase selector complexity)." },
+        { "id": 48, "question": "What is a partial in Sass/SCSS?", "answer": "A file starting with _ (underscore) meant to be imported into other files." },
+        { "id": 49, "question": "What does @use do in modern Sass?", "answer": "Loads a Sass module with namespacing (preferred over legacy @import)." },
+        { "id": 50, "question": "Does SCSS run in the browser?", "answer": "No, it’s compiled to CSS during build time." }
+      ]
+    }
+  ]
+}

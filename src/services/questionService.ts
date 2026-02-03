@@ -12,6 +12,8 @@ import restQuestions from '../data/questions/rest_exam_50_questions.json'
 import architectQuestions from '../data/questions/software_architect_exam_100_questions.json'
 import angularQuestions from '../data/questions/angular_exam_100_questions.json'
 import nextjsQuestions from '../data/questions/nextjs_exam_100_questions.json'
+import cssScssEasyQuestions from '../data/questions/css_scss_easy_50_questions.json'
+import cssRelatedQuestions from '../data/questions/css_and_related_100_questions.json'
 
 // Map of subject codes to their data
 const subjectData: Record<string, Subject> = {
@@ -25,7 +27,9 @@ const subjectData: Record<string, Subject> = {
     'rest-api': restQuestions,
     'software-architect': architectQuestions,
     'angular': angularQuestions,
-    'nextjs': nextjsQuestions
+    'nextjs': nextjsQuestions,
+    'css-scss-easy': cssScssEasyQuestions,
+    'css-related': cssRelatedQuestions
 }
 
 export type QuestionStrategy = 'random' | 'not_answered' | 'least_answered';
@@ -44,6 +48,8 @@ export const questionService = {
             { name: 'React', code: 'react', totalQuestions: reactQuestions.totalQuestions },
             { name: 'Angular', code: 'angular', totalQuestions: angularQuestions.totalQuestions },
             { name: 'Next.js', code: 'nextjs', totalQuestions: nextjsQuestions.totalQuestions },
+            { name: 'CSS & SCSS (Easy)', code: 'css-scss-easy', totalQuestions: cssScssEasyQuestions.totalQuestions },
+            { name: 'CSS (and Related Tech)', code: 'css-related', totalQuestions: cssRelatedQuestions.totalQuestions },
             { name: 'Java', code: 'java', totalQuestions: javaQuestions.totalQuestions },
             { name: 'TypeScript', code: 'typescript', totalQuestions: tsQuestions.totalQuestions },
             { name: 'JavaScript', code: 'javascript', totalQuestions: jsQuestions.totalQuestions },
